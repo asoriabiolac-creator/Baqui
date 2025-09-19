@@ -1,0 +1,201 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+}
+html {
+    scroll-behavior: smooth;
+}
+main {
+    background-image: url("../imagen/XD3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Libro de Reclamaciones */
+.libro-reclamaciones {
+    max-width: 600px;
+    margin: 54px auto 60px auto;
+    padding: 36px 24px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #1763b711;
+    border: 1px solid #eaf6ff;
+}
+
+.libro-reclamaciones h2 {
+    font-size: 2em;
+    color: #1763b7;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.libro-info {
+    text-align: center;
+    color: black;
+    margin-bottom: 24px;
+    font-size: 1.08em;
+}
+
+.libro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.libro-form-row {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.libro-form-group {
+    flex: 1 1 0px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.libro-form-group label {
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+}
+
+.libro-form-group input,
+.libro-form-group textarea,
+.libro-form-group select {
+    padding: 10px 12px;
+    border: 1.5px solid #eaf6ff;
+    border-radius: 7px;
+    font-size: 1em;
+    background: #f9fbff;
+    transition: border 0.2s;
+}
+
+.libro-form-group input:focus,
+.libro-form-group textarea:focus,
+.libro-form-group select:focus {
+    border-color: #1763b7;
+    outline: none;
+}
+
+.libro-form-actions {
+    justify-content: flex-end;
+}
+
+.libro-form button {
+    background: linear-gradient(90deg, #ff3c3c, #c10000);
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px #ff3c3c44;
+}
+
+.libro-form button:hover {
+    background: linear-gradient(90deg, #c10000, #ff3c3c);
+}
+
+.libro-legal {
+    margin-top: 18px;
+    text-align: center;
+    color: #555;
+    font-size: 0.93em;
+}
+
+/* Responsive para tablet  */
+@media (max-width: 900px) {
+    .libro-reclamaciones {
+        max-width: 90%; /* Ocupa más ancho en tablets */
+        margin: 40px auto; /* Margen superior e inferior para tablets */
+        padding: 28px 18px; /* Reducir padding para tablets */
+    }
+    .libro-reclamaciones h2 {
+        font-size: 1.8em; /* Ajustar tamaño de fuente para tablets */
+        margin-bottom: 15px;
+    }
+    .libro-info {
+        font-size: 1em; /* Ajustar tamaño de fuente para tablets */
+        margin-bottom: 20px;
+    }
+}
+/* Responsive para movil  */
+@media (max-width: 600px) {
+    .libro-reclamaciones {
+        max-width: 95%; /* Ocupa casi todo el ancho en móviles */
+        margin: 30px auto; /* Margen superior e inferior para móviles */
+        padding: 20px 12px; /* Reducir padding para móviles */
+    }
+    .libro-reclamaciones h2 {
+        font-size: 1.5em; /* Ajustar tamaño de fuente para móviles */
+        margin-bottom: 12px;
+    }
+    .libro-info {
+        font-size: 0.9em; /* Ajustar tamaño de fuente para móviles */
+        margin-bottom: 15px;
+    }
+    .libro-form {
+        gap: 12px; /* Reducir el espacio entre filas del formulario */
+    }
+    .libro-form-row {
+        flex-direction: column;
+        gap: 8px; /* Reducir el espacio entre elementos en una fila */
+    }
+    .libro-form-group label {
+        font-size: 0.9em; /* Ajustar tamaño de fuente de las etiquetas */
+    }
+    .libro-form-group input,
+    .libro-form-group textarea,
+    .libro-form-group select {
+        padding: 8px 10px; /* Ajustar padding de inputs */
+        font-size: 0.9em; /* Ajustar tamaño de fuente de inputs */
+    }
+    .libro-form button {
+        font-size: 1em; /* Ajustar tamaño de fuente del botón */
+        padding: 10px 24px; /* Ajustar padding del botón */
+    }
+    .libro-legal {
+        font-size: 0.85em; /* Ajustar tamaño de fuente legal */
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .libro-reclamaciones {
+        padding: 15px 10px; /* Más pequeño para pantallas muy chicas */
+        margin: 20px auto;
+    }
+    .libro-reclamaciones h2 {
+        font-size: 1.3em;
+    }
+    .libro-info {
+        font-size: 0.85em;
+    }
+    .libro-form-group label {
+        font-size: 0.85em;
+    }
+    .libro-form-group input,
+    .libro-form-group textarea,
+    .libro-form-group select {
+        font-size: 0.85em;
+        padding: 7px 9px;
+    }
+    .libro-form button {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
+    .libro-legal {
+        font-size: 0.8em;
+    }
+}

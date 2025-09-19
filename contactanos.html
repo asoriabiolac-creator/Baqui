@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Baqui - Productos Lácteos</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/contactanos.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="imagen/baqui.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="promociones.html">PROMOCIONES</a></li>
+                
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <a href="contactanos.html" class="contactanos-link">CONTACTANOS</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="dropdown-menu">
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="promociones.html">PROMOCIONES</a>
+        <a href="contactanos.html">CONTACTANOS</a>
+    </div>
+        <div class="custom-wave">
+      <div class="wave"></div>
+    </div>  
+    </header>
+    <main>  
+    <section id="Contacto" class="contacto">
+        <div class="contenedor">
+            <!-- TEXTO + FORMULARIO -->
+            <div class="formulario" data-aos="fade-right" data-aos-duration="1000">
+                <h2>Contáctenos</h2>
+                <p class="subtitulo">
+                    Si tiene alguna consulta, póngase en contacto con nosotros.
+                </p>
+                <p class="descripcion">
+                    Llena el formulario y nos pondremos en contacto a la brevedad.
+                </p>
+                <form id="contactForm" method="POST">
+                    <div class="fila">
+                        <input type="text" name="name" placeholder="Su nombre" required />
+                        <input type="email" name="email" placeholder="Su correo electrónico" required />
+                    </div>
+                    <input type="text" name="subject" placeholder="Asunto" />
+                    <textarea name="message" rows="5" placeholder="Mensaje"></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <!-- MAPA -->
+            <div class="mapa" data-aos="fade-left" data-aos-duration="1000">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21385.766517776516!2d-77.06961801214482!3d-12.077066550429924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c91a5000653d%3A0x1654d5501a2ea1e9!2sMuseo%20Larco!5e0!3m2!1ses-419!2spe!4v1757354795383!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <div class="custom-wave-2">
+        <div class="wave-2"></div>
+    </div>
+    <footer class="footerGO">
+        <div class="footer-content">
+            <div class="footer-col footer-logo-info">
+                <div class="logo-info-container">
+                    <img src="imagen/baqui.png" alt="Logo">
+                    <div>
+                        <div class="footer-empresa">BIOLAC S.A.C</div>
+                        <div class="footer-ruc">RUC: 20614207664</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col footer-links">
+                <a href="index.html">INICIO</a>
+                <a href="productos.html">PRODUCTOS</a>
+                <a href="nosotros.html">NOSOTROS</a>
+                <a href="promociones.html">PROMOCIONES</a>
+            </div>
+            <div class="footer-col footer-social">
+                <div class="footer-title">Síguenos</div>
+                <div class="social-link">
+                    <img src="imagen/facebook.png" alt="Facebook" class="social-icon">
+                    <a href="https://web.facebook.com/profile.php?id=61572982743698">Facebook</a>
+                </div>
+                <div class="social-link">
+                    <img src="imagen/inst.png" alt="Instagram" class="social-icon">
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="social-link">
+                    <img src="imagen/tktk.png" alt="TikTok" class="social-icon">
+                    <a href="https://www.tiktok.com/@baquilacteosperu?_t=ZS-8zXlNaDYYCX&_r=1">TikTok</a>
+                </div>
+                <div class="social-link">
+                    <img src="imagen/wasap.jpg" altk="WhatsApp" class="social-icon">
+                    <a href="http://wa.me/51972258994">WhatsApp</a>
+                </div>
+
+            </div>
+            <div class="footer-col footer-libro">
+                <div class="footer-title">Libro de Reclamaciones</div>
+                <a href="libro.html">
+                    <img src="imagen/libro.jpeg" alt="Libro de reclamaciones" class="libro-img">
+                </a>
+            </div>
+        </div>
+        <div class="footer-reservados">
+            Todos los derechos reservados ©2025 Baqui, Perú.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/responsive.js"></script>
+</body>
+
+</html>

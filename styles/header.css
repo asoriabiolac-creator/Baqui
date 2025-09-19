@@ -1,0 +1,105 @@
+header {
+    background: #000000;
+    background-image: url("../imagen/backFooter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.navbar-left .logo {
+    height: 60px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+}
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+.navbar-left a,
+.contactanos-link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+}
+.navbar-left a:hover,
+.contactanos-link:hover {
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+/* Waves */
+.custom-wave {
+    position: relative;
+    height: 20px;
+    background-color: transparent;
+}
+.wave {
+    position: relative;
+    top: 0px;
+    height: 100px;
+    background: radial-gradient(circle at 50% 0%, #000 60%, transparent 61%) repeat-x;
+    background-size: 34px 50px;
+    animation: waveScroll 4s linear infinite;
+    opacity: 1;
+    z-index: 0;
+    margin-top: -5px;
+}
+@keyframes waveScroll {
+    from { background-position: 0 0; }
+    to { background-position: 50px 0; }
+}
+.custom-wave-2 {
+    position: relative;
+    height: 30px;
+    background-color: transparent;
+    overflow: hidden;
+}
+.wave-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: radial-gradient(circle at 50% 100%, #000 60%, transparent 60%) repeat-x;
+    background-size: 34px 45px;
+    animation: waveScrollUp 4s linear infinite;
+    opacity: 1;
+    z-index: 0;
+}
+.wave-2.second {
+    animation: waveScrollUp 12s linear infinite reverse;
+    opacity: 0.5;
+    z-index: -1;
+}
+@keyframes waveScrollUp {
+    from { background-position: 0 100%; }
+    to { background-position: 50px 100%; }
+}
+/* Responsive header/navbar */
+@media (max-width: 900px) {
+    .navbar { flex-direction: column; gap: 8px; padding: 12px 8px; }
+    .navbar-left ul { flex-wrap: wrap; gap: 12px; justify-content: center; }
+}
+@media (max-width: 600px) {
+    .navbar-left ul { flex-direction: column; gap: 8px; }
+}

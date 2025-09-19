@@ -1,0 +1,393 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    background-image: url("../imagen/XD3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.baqui-section-nosotros {
+    padding: 80px 32px;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+}
+.baqui-section-nosotros::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent;
+    z-index: 0;
+}
+.baqui-card-nosotros {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+.baqui-card-nosotros.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.logo-container {
+    flex: 0 0 300px;
+    text-align: center;
+    padding-right: 50px;
+}
+.baqui-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+.baqui-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+.text-content {
+    flex: 1;
+}
+.text-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #222;
+    position: relative;
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+.text-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100px; height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffcc00);
+    border-radius: 2px;
+}
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+.text-content strong {
+    color: #000;
+    font-weight: 700;
+    background: linear-gradient(transparent 70%, rgba(255, 215, 0, 0.3) 70%);
+}
+
+
+.nosotros-extra {
+    padding: 80px 32px;
+    background: transparent;
+}
+.nosotros-row {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+}
+.nosotros-block {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+    border-left: 5px solid #ffd700;
+}
+.nosotros-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+.nosotros-block h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #222;
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+}
+.nosotros-block h2::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffd700, #ffcc00);
+    border-radius: 2px;
+}
+.nosotros-block p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.proposito-block {
+    background: white;
+    border-left: 5px solid #ffcc00;
+}
+
+.mision-vision-row {
+    display: flex;
+    gap: 40px;
+}
+.nosotros-mini-block {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+    border-left: 5px solid #ffd700;
+}
+.nosotros-mini-block:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+.nosotros-mini-block h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+.nosotros-mini-block p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.icon-container {
+    margin-bottom: 25px;
+}
+.icon-container i {
+    font-size: 3rem;
+    color: #ffcc00;
+    background: rgba(255, 204, 0, 0.1);
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.nosotros-block:hover .icon-container i,
+.nosotros-mini-block:hover .icon-container i {
+    transform: rotate(10deg) scale(1.1);
+    background: rgba(255, 204, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.animated-element {
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.slide-in-left { transform: translateX(-100px); }
+.slide-in-right { transform: translateX(100px); }
+.slide-in-up { transform: translateY(100px); }
+.scale-up { transform: scale(0.9); }
+.fade-in { opacity: 0; }
+.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+.title-animation {
+    position: relative;
+    overflow: hidden;
+}
+.title-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 4px;
+    background: linear-gradient(90deg, blue, blue);
+    border-radius: 2px;
+    transition: width 1s ease 0.5s;
+}
+.active .title-animation::after {
+    width: 100px;
+}
+
+.equipo-section {
+    background: transparent;
+    padding: 10px 0 24px;
+    text-align: center;
+}
+.equipo-title {
+    font-size: 3rem;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.equipo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.equipo-card {
+    background: rgba(255,255,255,0.97);
+    border-radius: 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    padding: 32px 10px 20px 10px;
+    max-width: 220px;
+    min-width: 180px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(.22,1,.36,1);
+    margin-bottom: 0;
+}
+.equipo-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.equipo-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 26px rgba(0,0,0,0.12);
+    border: 4px solid #ffd700;
+    background: #fff;
+    display: block;
+}
+.equipo-nombre {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #333;
+    margin-top: 8px;
+    word-break: break-word;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.equipo-cargo {
+    font-size: 1.1rem;
+    color: red;
+    margin-top: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .baqui-card-nosotros {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    .logo-container {
+        padding-right: 0;
+        padding-bottom: 30px;
+        flex: 0 0 auto;
+    }
+    .text-content h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .mision-vision-row {
+        flex-direction: column;
+    }
+    .detalle-item,
+    .detalle-item.reversed {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+    .img-decoration { display: none; }
+}
+@media (max-width: 768px) {
+    .baqui-section-nosotros,
+    .nosotros-extra {
+        padding: 60px 20px;
+    }
+    .baqui-card-nosotros {
+        padding: 30px 20px;
+    }
+    .nosotros-block,
+    .nosotros-mini-block {
+        padding: 30px 20px;
+    }
+    .text-content h1 {
+        font-size: 2.2rem;
+    }
+    .compromiso-container {
+        padding: 40px 20px;
+    }
+    .compromiso-container h2 {
+        font-size: 2rem;
+    }
+    .compromiso-texto {
+        font-size: 1.1rem;
+    }
+    .compromiso-features {
+        gap: 25px;
+    }
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .equipo-section {
+        padding: 18px 0 6px 0;
+    }
+    .equipo-title {
+        font-size: 1.45rem;
+        margin-bottom: 10px;
+    }
+    .equipo-grid {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center; /* Centrar las tarjetas en columna */
+    }
+    .equipo-card {
+        max-width: 93vw;
+        min-width: 80px;
+        padding: 18px 4px 8px 4px;
+        min-height: 140px;
+        margin: 0 auto; /* Centrar cada tarjeta */
+    }
+    .equipo-img {
+        width: 62px;
+        height: 62px;
+        margin-bottom: 10px;
+    }
+    .equipo-nombre {
+        font-size: 1rem;
+    }
+    .equipo-cargo {
+        font-size: 0.85rem; /* Ajustar tamaño de fuente del cargo */
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,297 @@
+footer {
+    background: #000000;
+    background-image: url("../imagen/backFooter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 32px 0 18px 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+    flex: 1 1 220px;
+    gap: 18px;
+    padding: 8px 0;
+}
+.footer-logo-info {
+    align-items: center;
+    text-align: center;
+}
+.logo-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo-info img {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+.footer-empresa,
+.footer-ruc {
+    font-weight: bold;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+}
+.footer-links {
+    align-items: center;
+    text-align: center;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    margin-bottom: 2px;
+    display: block;
+}
+.footer-links a:hover {
+    color: #ffd700;
+}
+.footer-title {
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.footer-social {
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda */
+    gap: 2px;
+    padding-left: 100px; /* Nuevo: mueve el contenido 10px a la derecha */
+}
+
+.footer-social .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    justify-content: flex-start; /* Alinea el contenido de cada enlace a la izquierda */
+    min-width: 150px; /* Asegura un ancho mínimo para una mejor alineación */
+}
+.social-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.footer-social a:hover {
+    color: #ffd700;
+}
+.footer-libro {
+    align-items: center;
+    text-align: center;
+}
+.libro-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.13);
+    background: transparent;
+}
+.footer-contactanos {
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-reservados {
+    padding: 12px 32px;
+    margin-top: 16px;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+        padding: 0 6px;
+    }
+    .footer-col {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 8px 0;
+        width: 100%;
+    }
+    .footer-col:nth-child(1), .footer-col:nth-child(2) {
+        grid-row: 1;
+    }
+    .footer-col:nth-child(3), .footer-col:nth-child(4) {
+        grid-row: 2;
+    }
+    .footer-logo-info img,
+    .libro-img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    .footer-title,
+    .footer-links a,
+    .footer-social a,
+    .footer-empresa,
+    .footer-ruc {
+        text-align: center !important;
+        font-size: 1em;
+    }
+}
+@media (max-width: 100%) {
+    .footer-content {
+        display: flex;
+        flex-direction: column; /* Cambiado a columna para apilar */
+        flex-wrap: nowrap; /* Desactivar flex-wrap ya que estamos en columna */
+        justify-content: center; /* Centrar los elementos principales */
+        align-items: center; /* Centrar todo el contenido del footer */
+        gap: 25px; /* Espacio vertical entre las secciones principales */
+        padding: 20px 15px;
+    }
+    .footer-col {
+        padding: 0; /* Remover padding innecesario */
+        width: 100%; /* Ocupar todo el ancho disponible */
+        max-width: 300px; /* Limitar el ancho de la columna para mejor lectura */
+    }
+
+    .footer-logo-info {
+        order: 1;
+        text-align: center; /* Centrar el bloque del logo+info */
+        align-items: center;
+        padding-right: 0;
+    }
+    .footer-logo-info .logo-info-container {
+        flex-direction: column; /* Apilar logo y texto */
+        align-items: flex-start; /* Alinear contenido a la izquierda dentro del contenedor */
+        justify-content: center; /* Centrar el contenedor en el padre */
+        margin: 0 auto; /* Centrar el contenedor mismo */
+        width: fit-content; /* Ajustar el ancho al contenido */
+        gap: 5px; /* Espacio entre logo y texto */
+    }
+    .footer-logo-info img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 0;
+    }
+    .footer-empresa, .footer-ruc {
+        text-align: left; /* Alinear texto a la izquierda */
+        font-size: 0.8em; /* Más pequeño para celular */
+    }
+
+    .footer-social {
+        order: 2;
+        text-align: center; /* Centrar el texto 'Síguenos' */
+        align-items: center;
+    }
+    .footer-social .social-link {
+        justify-content: center; /* Centrar los iconos sociales */
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .footer-social a {
+        font-size: 0.8em; /* Más pequeño para celular */
+    }
+
+    .footer-libro {
+        order: 3;
+        text-align: center; /* Centrar el texto 'Libro de Reclamaciones' */
+        align-items: center;
+    }
+    .libro-img {
+        margin: 0 auto; /* Centrar el icono del libro */
+        width: 40px;
+        height: 40px;
+    }
+    .footer-links {
+        display: none; /* Ocultar los enlaces de navegación */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* order: 4; */ /* Este orden ya no es necesario si se oculta */
+        /* text-align: center; */
+    }
+    .footer-links a {
+        font-size: 0.8em; /* Más pequeño para celular */
+    }
+
+    .footer-title {
+        font-size: 0.9em; /* Títulos de secciones más pequeños */
+    }
+
+    .footer-reservados {
+        order: 4; /* Nuevo orden */
+        text-align: center;
+        font-size: 0.8em; /* Más pequeño para celular */
+        padding: 0;
+        margin-top: 15px; /* Ajustar margen superior */
+    }
+}
+
+@media (max-width: 100%) {
+    .footer-content {
+        gap: 15px; /* Reducir aún más el gap */
+        padding: 10px 5px;
+    }
+    .footer-col {
+        max-width: 250px; /* Ajustar ancho máximo para pantallas muy pequeñas */
+    }
+    .footer-logo-info .logo-info-container {
+        gap: 2px; /* Reducir espacio */
+    }
+    .footer-logo-info img {
+        width: 60px;
+        height: 60px;
+    }
+    .social-icon, .libro-img {
+        width: 30px;
+        height: 30px;
+    }
+    .footer-title {
+        font-size: 0.85em;
+    }
+    .footer-social a, .footer-empresa, .footer-ruc, .footer-reservados, .footer-links a {
+        font-size: 0.75em; /* Aún más pequeños para pantallas muy chicas */
+    }
+}

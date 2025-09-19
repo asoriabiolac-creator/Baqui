@@ -1,0 +1,220 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+}
+html {
+    scroll-behavior: smooth;
+}
+main {
+    background-image: url("../imagen/XD3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sección general */
+.contacto {
+    padding: 80px 32px; /* Aumenta el padding para dar espacio al panel */
+    background: transparent; /* Asegura que el fondo de la sección sea transparente */
+    position: relative;
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Espacio entre los dos paneles */
+    flex-wrap: wrap; /* Permite que los paneles se envuelvan en pantallas pequeñas */
+}
+@media (min-width: 1024px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        gap: 6rem;
+    }
+}
+
+/* Textos */
+.contacto h2 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+.contacto .subtitulo {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.contacto .descripcion {
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Formulario */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.fila {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; 
+}
+@media (min-width: 1024px) {
+    .fila {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 3rem; 
+    }
+}
+input, textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box; /* Añadido para mejor manejo del tamaño */
+}
+input:focus, textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px #000;
+}
+button {
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+    width: 100%; /* Cambiado de 107% a 100% */
+    box-sizing: border-box; /* Añadido para mejor manejo del tamaño */
+}
+button:hover {
+    background: #333;
+}
+
+.formulario {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Sombra más fuerte y visible */
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.mapa {
+    flex: 1;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 550px; /* Altura ajustada a 550px */
+    min-height: 320px; /* Mínima altura para evitar que sea demasiado pequeño */
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 1024px) {
+    /* Aquí podríamos añadir reglas específicas si es necesario, pero por ahora no se requiere */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 100%) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Reducir el espacio entre paneles para tablet */
+        padding: 0 15px; /* Añadir padding horizontal para tablet */
+    }
+    
+    .formulario {
+        min-width: unset;
+        width: 90%; /* Ajustar el ancho del formulario para tablet */
+        max-width: 600px; /* Limitar el ancho máximo */
+        padding: 40px; /* Ajustar padding para tablet */
+    }
+
+    .mapa {
+        min-width: unset;
+        width: 90%; /* Ajustar el ancho del mapa para tablet */
+        max-width: 600px; /* Limitar el ancho máximo */
+    }
+
+    .mapa iframe {
+        height: 400px; /* Ajustar altura para tablet */
+    }
+
+    .contacto h2 {
+        font-size: 1.8rem; /* Ajustar tamaño de fuente */
+    }
+    .contacto .subtitulo {
+        font-size: 1.3rem; /* Ajustar tamaño de fuente */
+    }
+}
+
+@media (max-width: 100px) {
+    .formulario {
+        padding: 55px; /* Reducir padding para móvil */
+        width: 100%; /* Asegurar que ocupe todo el ancho */
+    }
+    .fila {
+        gap: 14rem; /* Reducir el espacio entre campos en móvil */
+    }
+    input, textarea {
+        padding: 0.6rem 0.8rem; /* Ajustar padding de inputs */
+        font-size: 0.9rem; /* Reducir tamaño de fuente de inputs */
+    }
+    button {
+        padding: 0.6rem 1rem; /* Ajustar padding del botón */
+        font-size: 0.8rem; /* Reducir tamaño de fuente del botón */
+    }
+    .contacto h2 {
+        font-size: 1.5rem; /* Ajustar tamaño de fuente */
+        margin-bottom: 0.8rem;
+    }
+    .contacto .subtitulo {
+        font-size: 1.1rem; /* Ajustar tamaño de fuente */
+        margin-bottom: 1rem;
+    }
+    .contacto .descripcion {
+        font-size: 0.9rem; /* Ajustar tamaño de fuente */
+        margin-bottom: 1.5rem;
+    }
+    .mapa iframe {
+        height: 250px; /* Ajustar altura para móvil */
+    }
+}
+
+@media (max-width: 400px) {
+    .formulario {
+        padding: 39px; /* Reducir aún más el padding para pantallas muy pequeñas */
+    }
+    .contacto h2 {
+        font-size: 0.9rem;
+    }
+    .contacto .subtitulo {
+        font-size: 1rem;
+    }
+    .contacto .descripcion {
+        font-size: 0.85rem;
+    }
+}

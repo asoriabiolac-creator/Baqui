@@ -1,0 +1,82 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    background-image: url("../imagen/XD3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background: transparent;
+    min-height: 50vh; /* Asegura que la sección .a ocupe al menos la mitad de la altura del viewport */
+}
+
+.al {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-fondo {
+    max-width: 50%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.fondo-promociones-img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Para centrar con margin: auto */
+    margin: 0 auto;
+    padding: 15px; /* Un poco de padding para que no se pegue a los bordes */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+}
+
+@media (max-width: 900px) {
+    main, .main {
+        padding: 32em 6px;
+    }
+    .a {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .a {
+        padding: 1rem 0;
+        min-height: 30vh;
+    }
+    .fondo-promociones-img {
+        padding: 1px;
+    }
+}
+
+@media (max-width: 400px) {
+    .a {
+        padding: 0.5rem 0;
+        min-height: 25vh;
+    }
+    .fondo-promociones-img {
+        padding: 1px;
+    }
+}

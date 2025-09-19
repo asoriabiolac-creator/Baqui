@@ -1,0 +1,100 @@
+/* Estilos para el menú de hamburguesa */
+.hamburger-menu {
+    display: none; /* Ocultar por defecto en PC */
+    cursor: pointer;
+    padding: 10px;
+    z-index: 20; /* Asegurar que esté por encima de otros elementos */
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    background-color: #000; /* Fondo oscuro */
+    position: absolute;
+    top: 90px; /* Debajo del header */
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 15; /* Por encima del contenido principal, pero debajo de la hamburguesa */
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #333;
+}
+
+/* Mostrar menú desplegable cuando está activo */
+.dropdown-menu.active {
+    display: flex;
+}
+
+/* Animación del icono de hamburguesa */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media Queries para Responsive */
+@media (max-width: 900px) {
+    .navbar-left ul,
+    .navbar-right .contactanos-link {
+        display: none; /* Ocultar navegación normal */
+    }
+
+    .hamburger-menu {
+        display: block; /* Mostrar hamburguesa */
+    }
+
+    .navbar {
+        flex-direction: row; /* Mantener logo y hamburguesa en línea */
+        justify-content: space-between; /* Espaciar logo y hamburguesa */
+        padding: 10px 20px;
+    }
+
+    .navbar-left {
+        gap: 10px;
+    }
+
+    .navbar-left .logo {
+        height: 50px;
+    }
+
+    .dropdown-menu {
+        top: 70px; /* Ajustar posición del menú desplegable */
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar-left .logo {
+        height: 40px;
+    }
+
+    .dropdown-menu {
+        top: 60px; /* Ajustar posición del menú desplegable */
+    }
+}

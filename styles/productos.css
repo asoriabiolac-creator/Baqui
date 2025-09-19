@@ -1,0 +1,137 @@
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+    color: #222;
+}
+html {
+    scroll-behavior: smooth;
+}
+main {
+    background-image: url("../imagen/XD3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sección de productos */
+.productos-section {
+    padding: 5rem 2rem;
+    background: transparent;
+    text-align: center;
+}
+
+.productos-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    font-family: 'Libre Baskerville', serif;
+    color: #222;
+    position: relative;
+    display: inline-block;
+}
+
+.productos-section h1::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: black;
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Tarjeta de producto */
+.producto {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Imagen del producto */
+.producto img {
+    width: 80%;
+    max-width: 180px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 18px auto 8px auto;
+    border-bottom: none;
+    transition: transform 0.4s ease;
+    background: transparent;
+}
+
+.producto:hover img {
+    transform: scale(1.05);
+}
+
+/* Texto del producto */
+.producto p {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.2rem;
+    margin: 0;
+    color: #333;
+    line-height: 1.4;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.producto strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #000;
+    font-weight: 700;
+}
+
+/* Responsive universal */
+@media (max-width: 900px) {
+    main, .main {
+        padding: 0 6px;
+    }
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .productos-grid {
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+        align-items: center !important;
+    }
+    .producto {
+        max-width: 96vw !important;
+        min-width: 80px !important;
+        padding: 12px 2px 6px 2px !important;
+    }
+    .producto img {
+        max-width: 90px !important;
+        height: 70px !important;
+        margin: 10px auto 4px auto !important;
+    }
+    .productos-section h1 {
+        font-size: 1.2rem !important;
+    }
+}
